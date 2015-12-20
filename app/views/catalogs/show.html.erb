@@ -6,11 +6,11 @@
   <% else %>
     <li><%=@student["first_name"]%></li>
     <li><%=@student["last_name"]%></li>
-    <li><%=@capstone["name"]%></li>
-    <li><%=@capstone["description"]%></li>
-    <li><%=@capstone["url"]%></li>
+    <li><%=@student["cap_name"]%></li>
+    <li><%=@student["cap_desc"]%></li>
+    <li><%=@student["cap_url"]%></li>
     <li>
-      <%=image_tag @capstone["screenshot"]%>
+      <%=image_tag @student["cap_ss"]%>
     </li>
   <% end %>
 </ul>
