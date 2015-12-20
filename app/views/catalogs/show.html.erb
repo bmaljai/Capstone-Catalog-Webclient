@@ -1,1 +1,16 @@
-Show!
+<ul>
+  <% if @error_message.any? %>
+    <% @error_message.each do |message| %>
+      <li> <%= message %> </li>
+    <% end %>
+  <% else %>
+    <li><%=@student["first_name"]%></li>
+    <li><%=@student["last_name"]%></li>
+    <li><%=@capstone["name"]%></li>
+    <li><%=@capstone["description"]%></li>
+    <li><%=@capstone["url"]%></li>
+    <li>
+      <%=image_tag @capstone["screenshot"]%>
+    </li>
+  <% end %>
+</ul>
