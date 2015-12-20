@@ -1,0 +1,14 @@
+<table>
+<tr>
+  <th>Capstone</th>
+  <th>Creator</th>
+  <th>Thumbnail</th>
+</tr>
+<% @capstones.each do |capstone| %>
+<tr>
+<td><a href = "/catalogs/<%= catalog.id %>"><%= capstone.cap_name%></a></td>
+<td><%= capstone.full_name%></td>
+<td><%= capstone.cap_ss%></td>
+</tr>
+<% end %>
+</table>
