@@ -1,7 +1,7 @@
 class CatalogsController < ApplicationController
 
   def index
-    @capstones = Unirest.get("http://localhost:3000/capstones.json").body
+    @capstones = Unirest.get("http://localhost:3000/students.json").body
   end
 
   def show
@@ -30,7 +30,7 @@ class CatalogsController < ApplicationController
     capstones_hash.each do |capstone|
 
       return capstone if capstone["student_id"]==id
-      end
+      
 
     end
 

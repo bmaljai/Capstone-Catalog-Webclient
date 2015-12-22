@@ -6,9 +6,9 @@
 </tr>
 <% @capstones.each do |capstone| %>
 <tr>
-<td><a href = "/catalogs/<%= catalog.id %>"><%= capstone.cap_name%></a></td>
-<td><%= capstone.full_name%></td>
-<td><%= capstone.cap_ss%></td>
+<td><a href = "/catalogs/<%= capstone["id"] %>"><%= capstone["capstone"]["cap_name"]%></a></td>
+<td><%= "#{capstone["first_name"]} #{capstone["last_name"]}" %></td>
+<td><img src="<%= capstone["capstone"]["cap_ss"]%>" height="125" width="175"/></td>
 </tr>
 <% end %>
 </table>
