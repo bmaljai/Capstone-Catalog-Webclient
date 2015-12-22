@@ -1,7 +1,7 @@
 class CatalogsController < ApplicationController
 
   def index
-    @capstones = Unirest.get("http://localhost:3000/students.json").body
+    @catalogs = Catalog.all
   end
 
   def show

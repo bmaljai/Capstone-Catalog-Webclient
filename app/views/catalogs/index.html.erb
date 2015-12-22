@@ -4,11 +4,11 @@
   <th>Creator</th>
   <th>Thumbnail</th>
 </tr>
-<% @capstones.each do |capstone| %>
+<% @catalogs.each do |catalog| %>
 <tr>
-<td><a href = "/catalogs/<%= capstone["id"] %>"><%= capstone["capstone"]["cap_name"]%></a></td>
-<td><%= "#{capstone["first_name"]} #{capstone["last_name"]}" %></td>
-<td><img src="<%= capstone["capstone"]["cap_ss"]%>" height="125" width="175"/></td>
+<td><a href = "/catalogs/<%= catalog.id %>"><%= catalog.capstone_name%></a></td>
+<td><%= "#{catalog.first_name} #{catalog.last_name}" %></td>
+<td><img src="<%= catalog.capstone_screen %>" height="125" width="175"/></td>
 </tr>
 <% end %>
 </table>
