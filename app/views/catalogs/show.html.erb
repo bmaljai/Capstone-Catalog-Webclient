@@ -1,16 +1,32 @@
-<ul>
-  <% if @error_message.any? %>
-    <% @error_message.each do |message| %>
-      <li> <%= message %> </li>
+<table>
+    <% if @error_message.any? %>
+      <% @error_message.each do |message| %>
+        <tr><td> <%= message %> </td></tr>
+      <% end %>
+    <% else %>
+      <tr>
+        <td>First Name</td>
+        <td><%=@catalog.first_name%></td>
+      </tr>
+      <tr>
+      <td>Last Name</td>
+      <td><%=@catalog.last_name%></td>
+      </tr>
+      <tr>
+        <td>Capstone</td>
+        <td><%=@catalog.capstone_name%></td>
+      </tr>
+      <tr>
+        <td>Capstone Description</td>
+        <td><%=@catalog.capstone_desc%></td>
+      </tr>
+      <tr>
+      <td>Capstone URL</td>
+      <td><%=link_to( @catalog.capstone_url, @catalog.capstone_url) %></td>
+      </tr>
+      <tr>
+        <td>Capstone Screenshot</td>
+        <td><%=image_tag @catalog.capstone_screen%></td>
+      </tr>
     <% end %>
-  <% else %>
-    <li><%=@catalog.first_name%></li>
-    <li><%=@catalog.last_name%></li>
-    <li><%=@catalog.capstone_name%></li>
-    <li><%=@catalog.capstone_desc%></li>
-    <li><%=link_to( @catalog.capstone_url, @catalog.capstone_url) %></li>
-    <li>
-      <%=image_tag @catalog.capstone_screen%>
-    </li>
-  <% end %>
-</ul>
+</table>
