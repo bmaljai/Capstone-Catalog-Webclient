@@ -4,13 +4,13 @@
       <li> <%= message %> </li>
     <% end %>
   <% else %>
-    <li><%=@student["first_name"]%></li>
-    <li><%=@student["last_name"]%></li>
-    <li><%=@student["capstone"]["name"]%></li>
-    <li><%=@student["capstone"]["description"]%></li>
-    <li><%=link_to( @student["capstone"]["url"], @student["capstone"]["url"]) %></li>
+    <li><%=@catalog.first_name%></li>
+    <li><%=@catalog.last_name%></li>
+    <li><%=@catalog.capstone_name%></li>
+    <li><%=@catalog.capstone_desc%></li>
+    <li><%=link_to( @catalog.capstone_url, @catalog.capstone_url) %></li>
     <li>
-      <%=image_tag @student["capstone"]["screen_shot"]%>
+      <%=image_tag @catalog.capstone_screen%>
     </li>
   <% end %>
 </ul>
